@@ -6,7 +6,7 @@ export default function GithubWidget({ dict }: { dict: Dictionary }) {
       href="https://github.com/MayorWladi"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black  hover:scale-[1.02] cursor-pointer"
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
       style={{
         backgroundImage:
           "url('https://media.tenor.com/YZPnGuPeZv8AAAAd/coding.gif')",

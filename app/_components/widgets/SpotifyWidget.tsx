@@ -46,7 +46,7 @@ export default function SpotifyWidget({
       href={spotifyUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black  hover:scale-[1.02] cursor-pointer"
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
       style={{
         backgroundImage: spotify
           ? `url(${spotify.album_art_url})`

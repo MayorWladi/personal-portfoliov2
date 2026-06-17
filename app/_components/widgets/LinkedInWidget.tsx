@@ -4,7 +4,7 @@ export default function LinkedInWidget() {
       href="https://www.linkedin.com/in/wladimir-sanvicente-359096218/"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-linkedin/75 flex items-center justify-center hover:scale-[1.03] cursor-pointer"
+      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-linkedin/75 flex items-center justify-center hover:scale-[1.03] transition-transform duration-300 ease-in-out cursor-pointer"
     >
       <div className="grid place-items-center h-full w-full p-4">
         <svg
