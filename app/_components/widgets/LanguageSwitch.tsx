@@ -1,6 +1,7 @@
+// app/_components/widgets/LanguageSwitch.tsx
 "use client";
-
-import { usePathname, useRouter } from "next/navigation";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function LanguageSwitch({
   currentLabel,
@@ -8,19 +9,15 @@ export default function LanguageSwitch({
   currentLabel: string;
 }) {
   const pathname = usePathname();
-  const router = useRouter();
 
   const currentLocale = pathname.startsWith("/es") ? "es" : "en";
   const targetLocale = currentLocale === "en" ? "es" : "en";
-
-  const handleSwitch = () => {
-    const newPath = pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
-    router.push(newPath);
-  };
+  const newPath = pathname.replace(`/${currentLocale}`, `/${targetLocale}`);
 
   return (
-    <div
-      onClick={handleSwitch}
+    <Link
+      href={newPath}
+      prefetch
       className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-widget-bg flex flex-col items-center justify-center hover:scale-[1.03] cursor-pointer gap-1"
     >
       <h1 className="text-4xl font-bold">{currentLabel}</h1>
@@ -32,6 +29,6 @@ export default function LanguageSwitch({
           ES
         </span>
       </p>
-    </div>
+    </Link>
   );
 }
