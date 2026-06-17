@@ -1,0 +1,3 @@
+[build]
+  publish = "out"   # o ".next" o "dist" según tu caso
+  command = "npm run build"   # o "yarn build"
