@@ -3,7 +3,6 @@ import { getDictionary, hasLocale } from "./dictionaries";
 
 import AboutMe from "@/app/_components/widgets/AboutMe";
 import LanguageSwitch from "@/app/_components/widgets/LanguageSwitch";
-import ThemeToggle from "@/app/_components/widgets/ThemeToggle";
 import ProfilePhoto from "@/app/_components/widgets/ProfilePhoto";
 import AgeWidget from "@/app/_components/widgets/AgeWidget";
 import LinkedInWidget from "@/app/_components/widgets/LinkedInWidget";
@@ -52,7 +51,6 @@ export default async function HomePage({
         offlineLabel={dict.spotify.offline}
       />
       <DiscordStatus />
-      <ThemeToggle />
       <MailtoWidget />
     </section>
   );

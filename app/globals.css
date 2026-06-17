@@ -6,7 +6,6 @@
   --color-widget-border: rgba(24, 0, 0, 0.67);
   --color-widget-skills-bg: rgba(66, 69, 73, 0.74);
   --color-body-dark: #15011a;
-  --color-body-light: #f0edf2;
   --color-text-primary: #f8f8f8;
   --color-text-secondary: rgba(255, 255, 255, 0.67);
   --color-accent-purple: #c084fc;
@@ -29,28 +28,13 @@
 
 body {
   font-family: var(--font-sans);
+  background-image: url("/noise.gif");
 }
 
 /* Dark mode (default) */
 body {
   background-color: var(--color-body-dark);
   color: var(--color-text-primary);
-}
-
-/* Light mode */
-body.light {
-  background-color: var(--color-body-light);
-  color: #1a1a2e;
-}
-
-body.light .widget-card {
-  background-color: rgba(255, 255, 255, 0.85);
-  border-color: rgba(200, 200, 220, 0.5);
-  color: #1a1a2e;
-}
-
-body.light .widget-card .text-white\/67 {
-  color: rgba(26, 26, 46, 0.67);
 }
 
 /* Noise overlay */
@@ -62,10 +46,6 @@ body.light .widget-card .text-white\/67 {
   pointer-events: none;
   background-image: url("/noise.gif");
   background-repeat: repeat;
-}
-
-body.light .noise-overlay {
-  opacity: 0.02;
 }
 
 /* Links */
