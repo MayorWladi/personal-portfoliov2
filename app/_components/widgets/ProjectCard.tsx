@@ -14,7 +14,13 @@ export default function ProjectCard({ title, description, tech, bgImage, link }:
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card group relative rounded-xl overflow-hidden border-2 border-black/40 hover:border-black/60 hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none"
+      className="
+        widget-card group relative rounded-xl 
+        overflow-hidden border-black/40 
+        hover:border-black/60 hover:scale-[1.02] transition-all
+        duration-300 ease-in-out cursor-pointer 
+        flex flex-col justify-end min-h-[220px] select-none
+      "
       style={{
         backgroundImage: `url('${bgImage}')`,
         backgroundSize: "cover",
@@ -22,7 +28,13 @@ export default function ProjectCard({ title, description, tech, bgImage, link }:
       }}
     >
       {/* Capa de contraste oscuro para legibilidad del texto */}
-      <div className="absolute inset-0 from-black/90 via-black/50 to-black/20 z-0 transition-opacity group-hover:opacity-95" />
+      <div
+        className="
+        absolute inset-0 from-black/90 via-black/50 
+        to-black/20 z-0 transition-opacity group-hover:opacity-95
+        bg-black/35
+        "
+      />
 
       {/* Contenido de la tarjeta */}
       <div className="relative z-10 p-4 flex flex-col h-full justify-between">
