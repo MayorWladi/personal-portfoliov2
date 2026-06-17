@@ -27,7 +27,8 @@ export default async function LocaleLayout({
   return (
     <html lang={lang} className="antialiased">
       <body className="min-h-screen grid place-items-center">
-        <div className="noise-overlay" aria-hidden="true" />
+        {/* <div className="noise-overlay" aria-hidden="true" /> */}
+        <div className="noise-overlay" />
         {children}
       </body>
     </html>
