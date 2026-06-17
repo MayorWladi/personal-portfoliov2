@@ -3,7 +3,7 @@ import type { Dictionary } from "@/app/[lang]/dictionaries";
 export default function AboutMe({ dict }: { dict: Dictionary }) {
   return (
     <div
-      className="widget-card col-span-2 sm:col-span-3 row-span-2 rounded-xl overflow-hidden select-none border-2 border-black/40 p-0"
+      className="widget-card col-span-2 sm:col-span-3 row-span-2 rounded-xl overflow-hidden select-none border-black/40 p-0"
       style={{
         backgroundImage:
           "url('https://cdna.artstation.com/p/assets/images/images/021/720/920/original/pixel-jeff-mario.gif?1572709433')",
@@ -11,7 +11,7 @@ export default function AboutMe({ dict }: { dict: Dictionary }) {
         backgroundSize: "cover",
       }}
     >
-      <div className="flex flex-col justify-end h-full w-full bg-black/60 p-4 sm:p-6">
+      <div className="flex flex-col justify-end h-full w-full bg-black/50 p-4 sm:p-6">
         <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mb-2">
           {dict.aboutMe.greeting} 👋
         </h1>
