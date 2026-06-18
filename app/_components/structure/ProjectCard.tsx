@@ -17,7 +17,8 @@ export default function ProjectCard({
     <button
       type="button"
       onClick={onClick}
-      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-2 ring-inset ring-black/40 hover:ring-black/60 hover:scale-[1.02] transform-gpu bg-clip-padding transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation ${gridSpan}`} style={{
+      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-2 ring-inset ring-black/40 hover:ring-black/60 hover:scale-[1.02] transform-gpu bg-clip-padding transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation ${gridSpan}`}
+      style={{
         backgroundImage: `url('${gridImage}')`,
         backgroundSize: "cover",
         backgroundPosition: "center",
