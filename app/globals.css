@@ -41,7 +41,7 @@ body {
 
 /* En tu globals.css */
 .widget-card {
-  cursor: pointer;
+  /* cursor: pointer; */
   -webkit-tap-highlight-color: transparent;
   /* Quita el recuadro gris feo de iOS al hacer tap */
 }

@@ -18,7 +18,7 @@ export default function LanguageSwitch({
     <Link
       href={newPath}
       prefetch
-      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-widget-bg flex flex-col items-center justify-center hover:scale-[1.03] cursor-pointer gap-1"
+      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-widget-bg flex flex-col items-center justify-center hover:scale-[1.03] cursor-pointer gap-1"
     >
       <h1 className="text-4xl font-bold">{currentLabel}</h1>
       <p className="flex items-center justify-center gap-3 text-xl font-bold">
