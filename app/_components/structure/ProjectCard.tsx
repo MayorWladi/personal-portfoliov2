@@ -19,27 +19,24 @@ export default function ProjectCard({
     <button
       type="button"
       onClick={onClick}
-      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-2 ring-inset ring-black/40 hover:ring-black/60 hover:scale-[1.02] transform-gpu bg-clip-padding transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
+      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 ring-black hover:ring-black/60 hover:scale-[1.02] transform-gpu bg-clip-padding transition-all duration-300 ease-in-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
       style={{ WebkitTapHighlightColor: "transparent" }}
     >
       {/* CAPA DE FONDO (z-0) */}
-      <div className="absolute inset-0 z-0 overflow-hidden p-3">
+      <div className="absolute inset-0 z-0 overflow-hidden">
         {isMobile ? (
-          // Vista para móvil: Fondo difuminado + Mockup centrado
-          <div className="w-full h-full flex justify-center items-center pt-4 pb-16">
-            <div
-              className="absolute inset-0 opacity-40 blur-xl scale-110"
-              style={{ backgroundImage: `url('${gridImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
-            />
-            {/* Limitamos la altura h-[120%] u h-full para que el tlf se vea proporcionado en la tarjeta */}
+          // Vista para móvil: FONDO SÓLIDO (ya dado por bg-widget-bg del padre)
+          // El padding-top (pt-6) separa el teléfono del borde superior sin romper el contenedor
+          <div className="w-full h-full flex justify-center items-center pt-6 pb-12">
             <DeviceMockup
               os={tech.includes("Android") ? "android" : "ios"}
               src={gridImage}
-              className="h-full sm:h-[110%] shadow-[0_0_15px_rgba(0,0,0,0.8)] -rotate-2 group-hover:rotate-0 transition-transform duration-500"
+              // Redujimos un poco la altura (h-[95%]) para dar respiro natural
+              className="h-[95%] shadow-[0_0_20px_rgba(0,0,0,0.5)] rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500"
             />
           </div>
         ) : (
-          // Vista para escritorio: Imagen full background
+          // Vista para escritorio: Imagen full background original
           <div
             className="w-full h-full"
             style={{ backgroundImage: `url('${gridImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
@@ -47,7 +44,7 @@ export default function ProjectCard({
         )}
       </div>
 
-      {/* Degradado para asegurar que el texto sea legible */}
+      {/* Degradado para asegurar legibilidad (solo es realmente necesario si es desktop, pero no estorba en mobile) */}
       <div className="absolute inset-0 bg-linear-to-t from-black via-black/60 to-transparent z-0 transition-opacity group-hover:opacity-95" />
 
       {/* CONTENIDO DE TEXTO E ICONOS (z-10) */}
