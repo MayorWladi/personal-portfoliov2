@@ -9,10 +9,12 @@ export const projects = [
     title: "Incoming",
     shortDescription: "Tracker minimalista de finanzas personales.",
     fullDescription: "Enfocado en reducir la carga cognitiva del usuario mediante una interfaz limpia y utilidad directa. Actualmente en fase Alfa Cerrada.",
+    // tech: ["Flutter", "Dart", "Android"],
     tech: ["Flutter", "Dart", "Android"],
     gridImage: "https://media.tenor.com/YZPnGuPeZv8AAAAd/coding.gif", // Reemplazar con captura vertical
     gifPreview: "https://media.tenor.com/YZPnGuPeZv8AAAAd/coding.gif",
     link: "https://github.com/MayorWladi/incoming",
+    isMobile: true, // Agrega esta propiedad
     gridSpan: verticalCardClass // Esto vuelve la tarjeta vertical (2 filas de alto)
   },
   {
