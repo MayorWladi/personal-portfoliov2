@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { Project } from "@/app/lib/types";
+import DeviceMockup from "./DeviceMockup";
 
 export default function ProjectModal({ project, onClose }: { project: Project | null, onClose: () => void }) {
   useEffect(() => {
@@ -97,27 +98,12 @@ export default function ProjectModal({ project, onClose }: { project: Project | 
               )}
 
               {project.isMobile ? (
-                // Simulador de Hardware Móvil
-                <div className="relative z-10 h-44 sm:h-80 aspect-9/19 bg-black border-4 border-[#1e1e1e] rounded-3xl shadow-2xl overflow-hidden">
-
-                  {project.tech.includes("Android") ? (
-                    // Android Notch (Gota)
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-8 h-4 bg-black rounded-b-xl z-20 flex items-center justify-center">
-                      <div className="w-1.5 h-1.5 rounded-full bg-zinc-800"></div>
-                    </div>
-                  ) : (
-                    // iOS Notch (Isla)
-                    <div className="absolute top-2 left-1/2 -translate-x-1/2 w-16 h-4 bg-black rounded-full z-20"></div>
-                  )}
-
-                  <img
-                    src={project.gifPreview}
-                    alt="Demo en dispositivo"
-                    className="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                </div>
+                <DeviceMockup
+                  os={project.tech.includes("Android") ? "android" : "ios"}
+                  src={project.gifPreview}
+                  className="h-44 sm:h-80 mx-auto" // Le pasamos la altura específica para el modal
+                />
               ) : (
-                // Pantalla Escritorio
                 <img
                   src={project.gifPreview}
                   alt="Demo escritorio"
