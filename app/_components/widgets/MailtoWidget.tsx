@@ -5,7 +5,7 @@ export default function MailtoWidget() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
-      className="widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/75 flex items-center justify-center hover:scale-[1.03] cursor-pointer"
+      className="transition-all widget-card col-span-1 rounded-xl overflow-hidden select-none border-2 border-black/40 bg-accent-red/75 flex items-center justify-center hover:scale-[1.03] cursor-pointer"
     >
       <div className="grid place-items-center h-full w-full p-4">
         <svg

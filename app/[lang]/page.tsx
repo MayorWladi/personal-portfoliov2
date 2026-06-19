@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "./dictionaries";
+import Link from "next/link";
 
 import AboutMe from "@/app/_components/widgets/AboutMe";
 import LanguageSwitch from "@/app/_components/widgets/LanguageSwitch";
@@ -33,10 +34,13 @@ export default async function HomePage({
       <ProfilePhoto />
 
       {/* Row 3: Projects (2col) + Age + LinkedIn */}
+      {/* <Link href={`/${lang}/projects`} className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer block"> */}
       <ProjectsWidget
         title={dict.projects.title}
         description={dict.projects.description}
+        lang={lang}
       />
+      {/* </Link> */}
       <AgeWidget dict={dict} />
       <LinkedInWidget />
 
@@ -52,6 +56,6 @@ export default async function HomePage({
       />
       <DiscordStatus />
       <MailtoWidget />
-    </section>
+    </section >
   );
 }

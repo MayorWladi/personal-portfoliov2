@@ -4,6 +4,9 @@
     "descriptionStart": "Desarrollador Full-Stack",
     "descriptionEnd": "con experiencia en Next.js, Vue.js y Flutter. Me gusta experimentar con proyectos nuevos, en especial con videojuegos usando Unity."
   },
+  "navigation": {
+    "back": "Volver"
+  },
   "age": {
     "label": "EDAD",
     "years": "AÑOS",
@@ -29,6 +32,15 @@
   },
   "projectsPage": {
     "title": "Proyectos",
-    "placeholder": "Hola Mundo, estamos en Proyectos"
+    "placeholder": "Hola Mundo, estamos en Proyectos",
+    "liveDemo": "Demo en vivo",
+    "viewRepository": "Ver Repositorio"
+  },
+  "projectsList": {
+    "incoming": {
+      "title": "Incoming",
+      "shortDescription": "Tracker minimalista de finanzas personales.",
+      "fullDescription": "Enfocado en reducir la carga cognitiva del usuario mediante una interfaz limpia y utilidad directa. Actualmente en fase Alfa Cerrada."
+    }
   }
 }

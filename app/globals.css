@@ -22,10 +22,12 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+/* 
 * {
   transition: color 0.3s, background-color 0.3s, border-color 0.3s,
     opacity 0.3s, transform 0.3s, box-shadow 0.3s;
-}
+} 
+    */
 
 body {
   font-family: var(--font-sans);
@@ -35,6 +37,13 @@ body {
 body {
   background-color: var(--color-body-dark);
   color: var(--color-text-primary);
+}
+
+/* En tu globals.css */
+.widget-card {
+  /* cursor: pointer; */
+  -webkit-tap-highlight-color: transparent;
+  /* Quita el recuadro gris feo de iOS al hacer tap */
 }
 
 /* Noise overlay */
