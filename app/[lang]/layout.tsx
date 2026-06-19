@@ -7,9 +7,9 @@ export async function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Wladimir Sanvicente — Frontend Developer",
+  title: "Wladimir Sanvicente — Full-Stack Developer",
   description:
-    "Portfolio personal de Wladimir Sanvicente. Frontend Developer con experiencia en Vue.js, React, HTML, CSS y JavaScript.",
+    "Personal portfolio of Wladimir Sanvicente. Full-Stack Developer with experience in Next.js and other technologies.",
   icons: { icon: "/wladimirLofi.jpg" },
 };
 
