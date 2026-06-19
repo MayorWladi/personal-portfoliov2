@@ -32,6 +32,15 @@
   },
   "projectsPage": {
     "title": "Projects",
-    "placeholder": "Hello World, we are in Projects"
+    "placeholder": "Hello World, we are in Projects",
+    "liveDemo": "Live Demo",
+    "viewRepository": "View Repository"
+  },
+  "projectsList": {
+    "incoming": {
+      "title": "Incoming",
+      "shortDescription": "Minimalist personal finance tracker.",
+      "fullDescription": "Focused on reducing cognitive load through a clean interface and direct utility. Currently in Closed Alpha."
+    }
   }
 }

@@ -38,6 +38,7 @@ export default async function HomePage({
       <ProjectsWidget
         title={dict.projects.title}
         description={dict.projects.description}
+        lang={lang}
       />
       {/* </Link> */}
       <AgeWidget dict={dict} />

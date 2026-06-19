@@ -15,6 +15,14 @@ export default async function ProjectsPage({
 
   const dict = await getDictionary(lang);
 
+  const projectsList = dict.projectsList as Record<string, any>;
+  const localizedProjects = projectsData.map(p => ({
+    ...p,
+    title: projectsList?.[p.id]?.title || p.title,
+    shortDescription: projectsList?.[p.id]?.shortDescription || p.shortDescription,
+    fullDescription: projectsList?.[p.id]?.fullDescription || p.fullDescription
+  }));
+
   return (
     <main className="w-full max-w-[1200px] p-4 sm:p-6 flex flex-col gap-4">
       <div className="flex justify-between items-center mb-2">
@@ -31,7 +39,7 @@ export default async function ProjectsPage({
       </div>
 
       {/* Renderizamos el componente cliente pasándole los datos */}
-      <ProjectsClient projects={projectsData} />
+      <ProjectsClient projects={localizedProjects} dict={dict.projectsPage} />
     </main>
   );
 }

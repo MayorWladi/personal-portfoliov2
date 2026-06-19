@@ -3,9 +3,9 @@
 import { useState } from "react";
 import ProjectCard from "@/app/_components/structure/ProjectCard";
 import ProjectModal from "./ProjectModal";
-import { Project, projects } from "@/app/lib/types";
+import { Project } from "@/app/lib/types";
 
-export default function ProjectsClient() {
+export default function ProjectsClient({ projects, dict }: { projects: Project[], dict: any }) {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   return (
@@ -23,6 +23,7 @@ export default function ProjectsClient() {
 
       <ProjectModal
         project={selectedProject}
+        dict={dict}
         onClose={() => setSelectedProject(null)}
       />
     </>

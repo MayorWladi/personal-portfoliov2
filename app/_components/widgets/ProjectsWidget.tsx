@@ -6,9 +6,11 @@ import { useRef } from "react";
 export default function ProjectsWidget({
   title,
   description,
+  lang
 }: {
   title: string;
   description: string;
+  lang: string;
 }) {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -35,7 +37,7 @@ export default function ProjectsWidget({
         backgroundPosition: "center",
       }}
     >
-      <Link href={`/projects`}>
+      <Link href={`/${lang}/projects`}>
         {/* Div interno con fondo oscuro, borde y padding */}
         <div className="flex flex-col h-full w-full bg-black/50 p-4 rounded-lg border-2 border-black/40">
 

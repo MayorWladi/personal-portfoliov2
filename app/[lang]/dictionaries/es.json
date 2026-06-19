@@ -32,6 +32,15 @@
   },
   "projectsPage": {
     "title": "Proyectos",
-    "placeholder": "Hola Mundo, estamos en Proyectos"
+    "placeholder": "Hola Mundo, estamos en Proyectos",
+    "liveDemo": "Demo en vivo",
+    "viewRepository": "Ver Repositorio"
+  },
+  "projectsList": {
+    "incoming": {
+      "title": "Incoming",
+      "shortDescription": "Tracker minimalista de finanzas personales.",
+      "fullDescription": "Enfocado en reducir la carga cognitiva del usuario mediante una interfaz limpia y utilidad directa. Actualmente en fase Alfa Cerrada."
+    }
   }
 }
