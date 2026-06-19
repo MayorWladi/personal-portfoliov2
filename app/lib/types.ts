@@ -3,11 +3,8 @@
 const horizontalCardClass = "col-span-1 md:col-span-2";
 const verticalCardClass = "col-span-1 row-span-2";
 
-export interface Project {
+export interface BaseProject {
   id: string;
-  title: string;
-  shortDescription: string;
-  fullDescription: string;
   tech: string[];
   staticImage: string;
   previewGallery?: string[];
@@ -19,12 +16,15 @@ export interface Project {
   gridSpan?: string;
 }
 
-export const projects: Project[] = [
+export interface Project extends BaseProject {
+  title: string;
+  shortDescription: string;
+  fullDescription: string;
+}
+
+export const projects: BaseProject[] = [
   {
     id: "incoming",
-    title: "Incoming",
-    shortDescription: "Tracker minimalista de finanzas personales.",
-    fullDescription: "Enfocado en reducir la carga cognitiva del usuario mediante una interfaz limpia y utilidad directa. Actualmente en fase Alfa Cerrada.",
     // tech: ["Flutter", "Dart", "iOS"],
     tech: ["Flutter", "Dart", "Android"],
 

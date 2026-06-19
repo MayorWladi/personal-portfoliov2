@@ -18,9 +18,9 @@ export default async function ProjectsPage({
   const projectsList = dict.projectsList as Record<string, any>;
   const localizedProjects = projectsData.map(p => ({
     ...p,
-    title: projectsList?.[p.id]?.title || p.title,
-    shortDescription: projectsList?.[p.id]?.shortDescription || p.shortDescription,
-    fullDescription: projectsList?.[p.id]?.fullDescription || p.fullDescription
+    title: projectsList?.[p.id]?.title || "",
+    shortDescription: projectsList?.[p.id]?.shortDescription || "",
+    fullDescription: projectsList?.[p.id]?.fullDescription || ""
   }));
 
   return (
