@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { Project } from "@/app/lib/types";
 import DeviceMockup from "./DeviceMockup";
 
@@ -11,38 +12,38 @@ export default function ProjectCard({
   shortDescription,
   tech,
   staticImage,
+  previewGallery, // Recibe el array
   demoPreview,
   gridSpan = "col-span-1",
   isMobile,
   onClick
 }: ProjectCardProps) {
+  // Estado local para trackear el mouse
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <button
       type="button"
       onClick={onClick}
-      // Se eliminó 'transform-gpu' para evitar el salto de capa y se ajustó a 'ease-out'
-      className={`
-        widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 
-        ring-black hover:ring-black/60 hover:scale-[1.02] bg-clip-padding 
-        transition-all duration-300 ease-out cursor-pointer flex flex-col 
-        justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className={`widget-card group relative w-full text-left rounded-xl overflow-hidden ring-1 ring-black hover:ring-black/60 transform hover:scale-[1.02] bg-clip-padding transition-transform duration-300 ease-out cursor-pointer flex flex-col justify-end min-h-[220px] select-none touch-manipulation bg-widget-bg ${gridSpan}`}
       style={{ WebkitTapHighlightColor: "transparent" }}
     >
-      {/* CAPA DE FONDO (z-0) */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         {isMobile ? (
           <div className="w-full h-full flex justify-center items-center pt-6 pb-12">
             <DeviceMockup
               os={tech.includes("Android") ? "android" : "ios"}
               staticSrc={staticImage}
-              mediaSrc={demoPreview}
-              hoverMode={true} // <--- AÑADIR ESTA LÍNEA
-              className="h-[95%] shadow-[0_0_20px_rgba(0,0,0,0.5)] -rotate-2 group-hover:rotate-0 transition-transform duration-500 ease-out"
+              gallery={previewGallery} // Pasamos la galería
+              isHovered={isHovered}    // Pasamos el trigger
+              className="h-[95%] transform -rotate-2 group-hover:rotate-0 transition-transform duration-500 ease-out"
             />
           </div>
         ) : (
           <div
-            className="w-full h-full"
+            className="w-full h-full transition-transform duration-700 ease-out group-hover:scale-105"
             style={{ backgroundImage: `url('${staticImage}')`, backgroundSize: "cover", backgroundPosition: "center" }}
           />
         )}

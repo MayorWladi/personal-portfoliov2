@@ -10,6 +10,7 @@ export interface Project {
   fullDescription: string;
   tech: string[];
   staticImage: string;
+  previewGallery?: string[];
   bannerImage: string;
   iconImage: string;
   demoPreview: string;
@@ -28,6 +29,17 @@ export const projects: Project[] = [
     tech: ["Flutter", "Dart", "Android"],
 
     staticImage: "/projects/incoming-app/app-static-preview.webp", // Reemplazar con captura vertical
+    previewGallery: [
+      "/projects/incoming-app/gallery/slide-1.webp",
+      "/projects/incoming-app/gallery/slide-2.webp",
+      "/projects/incoming-app/gallery/slide-3.webp",
+      "/projects/incoming-app/gallery/slide-4.webp",
+      "/projects/incoming-app/gallery/slide-5.webp",
+      "/projects/incoming-app/gallery/slide-6.webp",
+      "/projects/incoming-app/gallery/slide-7.webp",
+      "/projects/incoming-app/gallery/slide-8.webp",
+      "/projects/incoming-app/gallery/slide-9.webp",
+    ],
     bannerImage: "/projects/incoming-app/app-banner.webp",
     iconImage: "/projects/incoming-app/app-icon.webp",
     demoPreview: "/projects/incoming-app/app-preview.gif",
