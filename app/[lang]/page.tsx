@@ -30,8 +30,8 @@ export default async function HomePage({
     <section className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 max-w-[1200px] p-3 sm:p-4 auto-rows-[192px]">
       {/* Row 1-2: AboutMe (3col 2row) + Language + Photo */}
       <AboutMe dict={dict} />
-      <LanguageSwitch currentLabel={dict.language.current} />
       <ProfilePhoto />
+      <LanguageSwitch currentLabel={dict.language.current} />
 
       {/* Row 3: Projects (2col) + Age + LinkedIn */}
       {/* <Link href={`/${lang}/projects`} className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer block"> */}
