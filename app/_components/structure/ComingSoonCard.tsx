@@ -38,7 +38,7 @@ export default function ComingSoonCard({ type, previewImage, previewSvg }: Comin
 				className={`absolute inset-0 animate-noise mix-blend-overlay z-10 transition-opacity duration-500 ${hasPreview ? "opacity-40 group-hover:opacity-15" : "opacity-40"
 					}`}
 				style={{
-					backgroundImage: "url('/noise.jpg')",
+					backgroundImage: "url('/noise.gif')",
 					backgroundSize: "200px 200px",
 				}}
 			/>
