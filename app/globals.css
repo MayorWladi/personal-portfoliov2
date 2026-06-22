@@ -111,6 +111,33 @@ a {
   }
 }
 
+@keyframes typing-dots {
+  0% {
+    content: '';
+  }
+
+  25% {
+    content: '.';
+  }
+
+  50% {
+    content: '..';
+  }
+
+  75% {
+    content: '...';
+  }
+
+  100% {
+    content: '';
+  }
+}
+
+.animate-dots::after {
+  content: '';
+  animation: typing-dots 1.5s infinite;
+}
+
 .animate-noise {
   animation: tv-noise 0.2s infinite;
 }

@@ -57,7 +57,7 @@ export default function ComingSoonCard({ type, previewImage, previewSvg }: Comin
 					</span>
 				</div>
 				<span className="text-white/40 font-mono text-[10px] uppercase tracking-widest">
-					Coming Soon...
+					Coming Soon<span className="animate-dots"></span>
 				</span>
 			</div>
 		</div>

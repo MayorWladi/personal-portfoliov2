@@ -1,4 +1,5 @@
 import type { Dictionary } from "@/app/[lang]/dictionaries";
+import Image from "next/image";
 
 export default function GithubWidget({ dict }: { dict: Dictionary }) {
   return (
@@ -6,16 +7,18 @@ export default function GithubWidget({ dict }: { dict: Dictionary }) {
       href="https://github.com/MayorWladi"
       target="_blank"
       rel="noopener noreferrer"
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
-      style={{
-        backgroundImage:
-          "url('https://media.tenor.com/YZPnGuPeZv8AAAAd/coding.gif')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer relative"
     >
-      <div className="flex flex-col h-full w-full bg-black/50">
+      <Image
+        src="/github-bg.webp"
+        alt="Fondo de código"
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover object-center z-0"
+        loading="eager"
+      />
+
+      <div className="relative z-10 flex flex-col h-full w-full bg-black/50">
         <svg
           className="self-end mt-4 mr-4 text-white/67"
           width="16"

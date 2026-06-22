@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRef } from "react";
 
 export default function ProjectsWidget({
@@ -29,19 +30,19 @@ export default function ProjectsWidget({
     <div
       // onMouseEnter={handleMouseEnter}
       // onMouseLeave={handleMouseLeave}
-      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer"
-      style={{
-        backgroundImage: "url('https://media.tenor.com/DmC5jNLSQ0IAAAAC/cornifer.gif')",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
+      className="widget-card col-span-2 rounded-xl overflow-hidden select-none border-2 border-black hover:scale-[1.02] transition-transform duration-300 ease-in-out cursor-pointer relative"
     >
-      <Link href={`/${lang}/projects`}>
-        {/* Div interno con fondo oscuro, borde y padding */}
-        <div className="flex flex-col h-full w-full bg-black/50 p-4 rounded-lg border-2 border-black/40">
+      <Image
+        src="/projects-bg.webp"
+        alt="Fondo de proyectos"
+        fill
+        sizes="(max-width: 768px) 100vw, 33vw"
+        className="object-cover object-center z-0"
+        loading="eager"
+      />
 
-          {/* Icono de flecha de navegación interna a la derecha */}
+      <Link href={`/${lang}/projects`} className="relative z-10 block h-full w-full">
+        <div className="flex flex-col h-full w-full bg-black/50 p-4 rounded-lg border-2 border-black/40">
           <svg
             className="self-end text-white/70 group-hover:translate-x-0.5 transition-transform"
             width="16"
