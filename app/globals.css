@@ -112,29 +112,35 @@ a {
 }
 
 @keyframes typing-dots {
-  0% {
-    content: '';
+
+  0%,
+  24% {
+    clip-path: inset(0 100% 0 0);
+    /* Oculta los 3 puntos */
   }
 
-  25% {
-    content: '.';
+  25%,
+  49% {
+    clip-path: inset(0 66% 0 0);
+    /* Muestra 1 punto */
   }
 
-  50% {
-    content: '..';
+  50%,
+  74% {
+    clip-path: inset(0 33% 0 0);
+    /* Muestra 2 puntos */
   }
 
-  75% {
-    content: '...';
-  }
-
+  75%,
   100% {
-    content: '';
+    clip-path: inset(0 0 0 0);
+    /* Muestra los 3 puntos */
   }
 }
 
 .animate-dots::after {
-  content: '';
+  content: '...';
+  display: inline-block;
   animation: typing-dots 1.5s infinite;
 }
 
