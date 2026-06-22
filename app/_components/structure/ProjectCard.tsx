@@ -50,7 +50,7 @@ export default function ProjectCard({
       </div>
 
       {/* Degradado */}
-      <div className="absolute inset-0 bg-linear-to-t from-black via-black/45 to-transparent z-0 transition-opacity duration-300 group-hover:opacity-95" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/60 to-black/10 z-0 transition-opacity duration-300 group-hover:opacity-95" />
 
       {/* CONTENIDO DE TEXTO E ICONOS (z-10) */}
       <div className="relative z-10 p-4 flex flex-col h-full justify-between pointer-events-none">
